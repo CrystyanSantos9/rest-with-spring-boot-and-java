@@ -30,11 +30,11 @@ jobs:
         cache: maven
         
     - name: Build  Application JAR with Maven
-      working-directory: ./rest-with-spring-boot-and-java
+      working-directory: .
       run: mvn clean package -DskipTests
 
     - name: Dcoker compose Build
-      working-directory: ./rest-with-spring-boot-and-java
+      working-directory: .
       run: docker compose up -d --build
 
     - name: Push to Docker Hub Container Registry
